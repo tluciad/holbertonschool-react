@@ -13,5 +13,7 @@ function updateCounter() {
     return (count)
 }
 
-// eslint-disable-next-line no-undef
-jQuery('button').on('click', _.debounce(updateCounter));
+$('button').on(_.debounce(() => {
+    updateCounter();
+    $('#count').text(`${count} clicks on the button`);
+  }));
