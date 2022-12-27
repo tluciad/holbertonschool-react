@@ -12,6 +12,9 @@ module.exports = {
   mode: 'production',
 
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      title: 'webpack',
+      filename: 'index.html'
+    })
   ]
 }
