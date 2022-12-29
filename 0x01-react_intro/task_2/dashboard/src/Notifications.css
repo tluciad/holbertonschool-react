@@ -1,4 +1,16 @@
 .Notifications {
     border: 3px ;
     padding: 3px;
+    border: dashed rgb(226, 76, 76);;
+}
+
+.Notifications p{
+    padding-left: 5px;
+    font-weight: bold;
+}
+li[data-priority='default']{
+    color:blue;
+}
+li[data-priority='urgent']{
+    color:red;
 }
