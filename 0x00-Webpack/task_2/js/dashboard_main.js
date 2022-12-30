@@ -16,3 +16,4 @@ function updateCounter() {
   }
   
   $('button').on('click', _.debounce(updateCounter, 5));
+/*adding logo*/
