@@ -9,7 +9,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         // More information here https://webpack.js.org/guides/asset-modules/
         type: "asset",
       }],
@@ -25,7 +25,9 @@ module.exports = {
   mode: 'production',
  
   performance : {
-    hints : false
+    hints : false, 
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
 },    
   plugins: [
     new HtmlWebpackPlugin({
