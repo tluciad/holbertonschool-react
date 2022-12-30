@@ -23,11 +23,15 @@ module.exports = {
     main: './js/dashboard_main.js'
   },
   mode: 'production',
-
+ 
+  performance : {
+    hints : false
+},    
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack',
       filename: 'index.html'
-    })
+    }),
+ 
   ]
 }
