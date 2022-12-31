@@ -1,0 +1,10 @@
+/* webpack */
+npm init -y
+npm install webpack webpack-cli --save-dev
+npm i jquery
+npm i lodash
+npm install --save-dev css-loader
+npm i image-webpack-loader --save-dev
+npm install file-loader --save-dev
+npm install --save-dev html-webpack-plugin
+npm install --save-dev style-loader
