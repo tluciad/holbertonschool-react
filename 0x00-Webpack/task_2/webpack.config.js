@@ -1,7 +1,15 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  entry: './js/dashboard_main.js',
+
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js'
+  },
+  
+  mode: 'production',
+
   module: {
     rules: [
       {
@@ -9,31 +17,22 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        // More information here https://webpack.js.org/guides/asset-modules/
-        type: "asset",
-      }],
-    },
-
-  output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
-  },
-  entry: {
-    main: './js/dashboard_main.js'
-  },
-  mode: 'production',
- 
+        test: /\.(png|jpe?g|gif)$/i,    
+        use: ['file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+                bypassOnDebug: true,
+                disable: true,
+            },
+          },
+        ],
+      }
+    ],
+  }, 
   performance : {
     hints : false, 
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-},    
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'webpack',
-      filename: 'index.html'
-    }),
- 
-  ]
+    maxEntrypointSize: 1000000,
+    maxAssetSize: 1000000
+  },   
 }
