@@ -1,0 +1,48 @@
+
+.App-header {
+  background-color: white; 
+  display: flex;  
+  color: rgb(226, 76, 76);
+  font-family: sans-serif;  
+  border-bottom: rgb(226, 76, 76) solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.App-logo {
+  right:200%;
+  max-height: 15rem;
+  left: auto;
+
+}
+
+.App-header h1 {
+ left: 150%;
+ margin-top: 8%
+}
+
+.App-body p{
+  color:rgb(48, 45, 45);
+  margin-top: 3%; 
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 550;
+  margin-left: 5px;  
+  text-align: left;
+}
+
+.App-footer{
+  border-top: rgb(226, 76, 76) solid;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(48, 45, 45);
+  bottom: 0;
+  margin-top: 20%;
+  position: inherit;
+  font-weight: bold;
+  font-size: large;  
+}
+
+label {
+  padding: 5px;
+}
