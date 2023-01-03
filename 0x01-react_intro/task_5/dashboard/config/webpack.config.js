@@ -7,7 +7,7 @@ module.exports = {
 
   output: {
     path: path.resolve('./dist'),
-    filename: '.bundle.js'
+    filename: 'bundle.js'
   }, 
 
   module: {
@@ -38,8 +38,13 @@ module.exports = {
 
   devServer: {
     hot: true,
-    contentBase: path.resolve('./dist'),
+    static: path.resolve('./dist'),
     compress: true,
     port: 3000,
   },  
+  performance : {
+    hints : false, 
+    maxEntrypointSize: 1000000,
+    maxAssetSize: 1000000
+  },   
 }
