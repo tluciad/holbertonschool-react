@@ -1,4 +1,4 @@
-import { getFooterCopy, getFullYear, getLatestNotification } from './utils';
+import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
 
 describe('testing ./utils functions', () => {
     
