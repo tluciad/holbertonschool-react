@@ -1,5 +1,5 @@
 
-.App-header {
+.Header {
     background-color: white; 
     display: flex;  
     color: rgb(226, 76, 76);
@@ -9,7 +9,7 @@
     margin-right: auto;
   }  
   
-  .App-header h1 {
+  .Header h1 {
    left: 150%;
    margin-top: 8%
   }
