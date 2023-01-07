@@ -1,4 +1,7 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -9,6 +12,12 @@ module.exports = {
     path: path.resolve('./dist'),
     filename: 'bundle.js'
   }, 
+  plugins: [new HtmlWebpackPlugin({
+    title: 'task_0 react props',
+    filename: 'index.html',
+    inject: 'body',
+})
+],
 
   module: {
     rules: [
