@@ -1,0 +1,22 @@
+
+.Header {
+    background-color: white; 
+    display: flex;  
+    color: rgb(226, 76, 76);
+    font-family: sans-serif;  
+    border-bottom: rgb(226, 76, 76) solid;
+    margin-left: auto;
+    margin-right: auto;
+  }  
+  
+  .Header h1 {
+   left: 150%;
+   margin-top: 8%
+  }
+
+  .App-logo {
+    right:200%;
+    max-height: 15rem;
+    left: auto;  
+  }
+    
