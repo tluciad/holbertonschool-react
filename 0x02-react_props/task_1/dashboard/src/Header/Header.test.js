@@ -1,18 +1,24 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Header from './Header.js'
+import { shallow, configure } from 'enzyme';
+import { expect } from 'chai';
+import Header from './Header';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 
-
+configure({adapter: new Adapter()});
 
 
 describe("Testing Header", () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(<Header shouldRender/>);
 
   it("should render without crashing", () => {
     shallow(<Header />);
   });
-  it("should render a div with the class Header", () => {
-    expect(wrapper.find('div.header')).toHaveLength(1);
-  });
+  
+  it("<Header /> render img tag", () => {
+    expect(wrapper.find('img')).to.have.lengthOf(1);
+	});
 
+  it("should render a div with the class Header", () => {
+    expect(wrapper.find('div.Header')).to.have.lengthOf(1);
   });
+});
